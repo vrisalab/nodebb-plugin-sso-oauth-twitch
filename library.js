@@ -47,8 +47,8 @@
 	 */
 
 	const constants = Object.freeze({
-		type: '',	// Either 'oauth' or 'oauth2'
-		name: '',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
+		type: 'oauth2',	// Either 'oauth' or 'oauth2'
+		name: 'twitch',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
 		oauth: {
 			requestTokenURL: '',
 			accessTokenURL: '',
@@ -56,13 +56,13 @@
 			consumerKey: nconf.get('oauth:key'),	// don't change this line
 			consumerSecret: nconf.get('oauth:secret'),	// don't change this line
 		},
-		oauth2: {
-			authorizationURL: '',
-			tokenURL: '',
-			clientID: nconf.get('oauth:id'),	// don't change this line
-			clientSecret: nconf.get('oauth:secret'),	// don't change this line
-		},
-		userRoute: '',	// This is the address to your app's "user profile" API endpoint (expects JSON)
+                oauth2: {
+                    authorizationURL: 'https://api.twitch.tv/kraken/oauth2/authorize',
+                    tokenURL: 'https://api.twitch.tv/kraken/oauth2/token',
+                    clientID: process.env.TWITCH_CLIENT_ID,
+                    clientSecret: process.env.TWITCH_CLIENT_SECRET
+                },
+                userRoute: 'https://api.twitch.tv/kraken/user'	// This is the address to your app's "user profile" API endpoint (expects JSON)
 	});
 
 	const OAuth = {};

@@ -1,11 +1,11 @@
 {
-  "name": "nodebb-plugin-sso-oauth",
-  "version": "0.5.0",
-  "description": "NodeBB Generic OAuth SSO",
+  "name": "nodebb-plugin-sso-oauth-twitch",
+  "version": "0.0.1",
+  "description": "NodeBB Twitch OAuth SSO",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth"
+    "url": "hhttps://github.com/vrisalab/nodebb-plugin-sso-oauth-twitch"
   },
   "keywords": [
     "nodebb",
@@ -18,12 +18,12 @@
     "registration"
   ],
   "author": {
-    "name": "Julian Lam",
-    "email": "julian@nodebb.org"
+    "name": "v_risalab",
+    "email": "v.risalab@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth/issues"
+    "url": "https://github.com/vrisalab/nodebb-plugin-sso-oauth-twitch"
   },
   "readme": "",
   "readmeFilename": "README.md",
