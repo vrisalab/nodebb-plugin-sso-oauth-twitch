@@ -1,11 +1,11 @@
 {
-  "name": "nodebb-plugin-sso-oauth-twitch",
+  "name": "nodebb-plugin-sso-twitch",
   "version": "0.0.1",
   "description": "NodeBB Twitch OAuth SSO",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "hhttps://github.com/vrisalab/nodebb-plugin-sso-oauth-twitch"
+    "url": "hhttps://github.com/vrisalab/nodebb-plugin-sso-twitch"
   },
   "keywords": [
     "nodebb",
@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vrisalab/nodebb-plugin-sso-oauth-twitch"
+    "url": "https://github.com/vrisalab/nodebb-plugin-sso-twitch"
   },
   "readme": "",
   "readmeFilename": "README.md",
