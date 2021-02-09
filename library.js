@@ -59,8 +59,9 @@
                 oauth2: {
                     authorizationURL: 'https://api.twitch.tv/kraken/oauth2/authorize',
                     tokenURL: 'https://api.twitch.tv/kraken/oauth2/token',
-		    clientID: nconf.get('oauth:key'),	// don't change this line
-		    clientSecret: nconf.get('oauth:secret'),	// don't change this line
+
+		    clientID: process.env.TWITCH_CLIENTID,	// don't change this line
+		    clientSecret: process.env.TWITCH_SECRET,	// don't change this line
                 },
                 userRoute: 'https://api.twitch.tv/kraken/user'	// This is the address to your app's "user profile" API endpoint (expects JSON)
 	});
