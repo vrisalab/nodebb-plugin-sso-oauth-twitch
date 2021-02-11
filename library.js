@@ -57,13 +57,13 @@
 			consumerSecret: nconf.get('oauth:secret'),	// don't change this line
 		},
                 oauth2: {
-                    authorizationURL: 'https://api.twitch.tv/kraken/oauth2/authorize',
-                    tokenURL: 'https://api.twitch.tv/kraken/oauth2/token',
+                    authorizationURL: 'https://id.twitch.tv/oauth2/authorize',
+                    tokenURL: 'https://id.twitch.tv/oauth2/token',
 
-		    clientID: process.env.TWITCH_CLIENTID,	// don't change this line
-		    clientSecret: process.env.TWITCH_SECRET,	// don't change this line
+		    clientID: nconf.get('oauth:key'),	// don't change this line
+		    clientSecret: nconf.get('oauth:secret'),	// don't change this line
                 },
-                userRoute: 'https://api.twitch.tv/kraken/user'	// This is the address to your app's "user profile" API endpoint (expects JSON)
+                userRoute: 'https://api.twitch.tv/helix/users'	// This is the address to your app's "user profile" API endpoint (expects JSON)
 	});
 
 	const OAuth = {};
@@ -154,7 +154,7 @@
 				url: '/auth/' + constants.name,
 				callbackURL: '/auth/' + constants.name + '/callback',
 				icon: 'fa-twitch',
-				scope: (constants.scope || '').split(','),
+				scope: (constants.scope || 'openid').split(','),
 			});
 
 			callback(null, strategies);
@@ -169,7 +169,7 @@
 		// Everything else is optional.
 
 		// Find out what is available by uncommenting this line:
-		// console.log(data);
+		console.log(data);
 
 		var profile = {};
 		profile.id = data.id;
